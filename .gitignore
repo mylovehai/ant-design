@@ -62,3 +62,6 @@ components/version/version.tsx
 # Image snapshot diff
 __diff_output__/
 /jest-stare
+
+
+examples

@@ -15,10 +15,13 @@ There are `primary` button, `default` button, `dashed` button and `link` button 
 
 ```jsx
 import { Button } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
 
 ReactDOM.render(
   <>
-    <Button type="primary">Primary Button</Button>
+    <Button type="primary" loading={{ delay: 3000 }} icon={<SearchOutlined />}>
+      主要
+    </Button>
     <Button>Default Button</Button>
     <Button type="dashed">Dashed Button</Button>
     <br />

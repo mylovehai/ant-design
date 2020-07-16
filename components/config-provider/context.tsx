@@ -30,6 +30,10 @@ export interface ConfigConsumerProps {
   dropdownMatchSelectWidth?: boolean;
 }
 
+/**
+ * Context 全局配置？？？
+ * getPrefixCls 获取的预设样式名
+ */
 export const ConfigContext = React.createContext<ConfigConsumerProps>({
   // We provide a default function for Context without provider
   getPrefixCls: (suffixCls: string, customizePrefixCls?: string) => {

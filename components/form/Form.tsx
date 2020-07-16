@@ -27,6 +27,7 @@ export interface FormProps extends Omit<RcFormProps, 'form'> {
   scrollToFirstError?: boolean;
 }
 
+// forwardRef() 传入的函数组件，转发 ref
 const InternalForm: React.ForwardRefRenderFunction<unknown, FormProps> = (props, ref) => {
   const contextSize = React.useContext(SizeContext);
   const { getPrefixCls, direction }: ConfigConsumerProps = React.useContext(ConfigContext);
@@ -100,9 +101,7 @@ const InternalForm: React.ForwardRefRenderFunction<unknown, FormProps> = (props,
 
   return (
     <SizeContextProvider size={size}>
-      <FormContext.Provider
-        value={formContextValue}
-      >
+      <FormContext.Provider value={formContextValue}>
         <FieldForm
           id={name}
           {...formProps}

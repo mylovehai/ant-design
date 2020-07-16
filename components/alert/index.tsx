@@ -65,6 +65,8 @@ interface AlertInterface extends React.FC<AlertProps> {
   ErrorBoundary: typeof ErrorBoundary;
 }
 
+// 定义组件
+// 初始化定义props，通过解构props，合并参数
 const Alert: AlertInterface = ({
   description,
   prefixCls: customizePrefixCls,
@@ -84,6 +86,7 @@ const Alert: AlertInterface = ({
   const [closed, setClosed] = React.useState(false);
 
   const ref = React.useRef<HTMLElement>();
+  // 订阅 React 的 Context
   const { getPrefixCls, direction } = React.useContext(ConfigContext);
   const prefixCls = getPrefixCls('alert', customizePrefixCls);
 
