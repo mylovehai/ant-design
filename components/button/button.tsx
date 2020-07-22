@@ -175,7 +175,6 @@ const InternalButton: React.ForwardRefRenderFunction<unknown, ButtonProps> = (pr
     block,
     ...rest
   } = props;
-  console.log('Button---link---');
   // 大小 Context
   const size = React.useContext(SizeContext);
   // 因为 loading 可为 number 类型，通过 !! 操作符，将数字类型的时候，转换成 boolean 类型。
